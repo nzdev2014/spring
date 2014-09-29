@@ -11,7 +11,7 @@ public interface ClientSideDAO {
 	public int insertClientSide(ClientSideVO vo);
 	public int updateClientSideOrders(int ref_no, int ref_step); // for hierarchical insert
 	public int updateClientSide(ClientSideVO vo);
-	public int deleteClientSide(int bbsno);
+	public int deleteClientSide(int bbsno); 
 	public Integer totalClientSideLists();
 
 }
