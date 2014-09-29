@@ -1,0 +1,81 @@
+CREATE table anotice (
+	seq		number primary key,
+	writer	varchar2(20),
+	title	varchar2(100) not null,
+	contents	varchar2(1000),
+	cdate	date,
+	udate	date,
+	hit		number
+)
+
+CREATE SEQUENCE seq_anotice START WITH 1 INCREMENT BY 1 NOCACHE;
+
+alter table anotice add (filepath varchar2(200));
+
+commit
+
+select * from anotice
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #11', 'Welcome To ANotice 11', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #12', 'Welcome To ANotice 12', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #13', 'Welcome To ANotice 13', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #14', 'Welcome To BBS 14', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #15', 'Welcome To ANotice 15', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #16', 'Welcome To ANotice 16', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #17', 'Welcome To BBS 17', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #18', 'Welcome To ANotice 18', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #19', 'Welcome To ANotice 19', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #20', 'Welcome To ANotice 20', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #21', 'Welcome To ANotice 21', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #22', 'Welcome To BBS 22', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #23', 'Welcome To ANotice 23', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #24', 'Welcome To BBS 24', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #25', 'Welcome To BBS 25', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #26', 'Welcome To ANotice 26', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search #27', 'Welcome To ANotice 27', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #28', 'Welcome To ANotice 28', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #29', 'Welcome To ANotice 29', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #30', 'Welcome To ANotice 30', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #31', 'Welcome To BBS 31', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #32', 'Welcome To ANotice 32', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #33', 'Welcome To ANotice 33', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #34', 'Welcome To ANotice 34', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #35', 'Welcome To BBS 35', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #36', 'Welcome To ANotice 36', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #37', 'Welcome To ANotice 37', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #38', 'Welcome To ANotice 38', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #39', 'Welcome To BBS 39', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #40', 'Welcome To ANotice 40', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #41', 'Welcome To ANotice 41', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #42', 'Welcome To BBS 42', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #43', 'Welcome To ANotice 43', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #44', 'Welcome To ANotice 44', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #45', 'Welcome To ANotice 45', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #46', 'Welcome To ANotice 46', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #47', 'Welcome To BBS 47', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #48', 'Welcome To ANotice 48', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #49', 'Welcome To ANotice 49', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #50', 'Welcome To ANotice 50', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #51', 'Welcome To BBS 51', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #52', 'Welcome To ANotice 52', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #53', 'Welcome To BBS 53', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #54', 'Welcome To ANotice 54', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #55', 'Welcome To ANotice 55', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #56', 'Welcome To ANotice 56', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #57', 'Welcome To ANotice 57', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #58', 'Welcome To ANotice 58', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #59', 'Welcome To ANotice 59', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #60', 'Welcome To ANotice 60', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Search Title #61', 'Welcome To BBS 61', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #62', 'Welcome To ANotice 62', SYSDATE, null, 0); 
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #63', 'Welcome To ANotice 63', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #64', 'Welcome To ANotice 64', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #65', 'Welcome To ANotice 65', SYSDATE, null, 0) ;
+insert into anotice values ( seq_anotice.nextval, 'boardadmin', 'Notice Board Title #66', 'Welcome To ANotice 66', SYSDATE, null, 0) ;
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+

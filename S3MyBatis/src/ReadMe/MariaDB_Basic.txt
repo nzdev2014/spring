@@ -1,0 +1,451 @@
+JDBC Connection String 
+   >> jdbc:mariadb://localhost:3306/mvc01?useUnicode=yes&amp;characterEncoding=UTF-8
+JDBC Driver Name
+   >> org.mariadb.jdbc.Driver
+
+
+> "C:\mariadb\bin\mysqld.exe" "--defaults-file=C:\mariadb\data\my.ini" "MySQL"
+----------      my.ini     -----------------------
+[mysqld]
+datadir=C:/mariadb/data
+port=3306
+sql_mode="STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION"
+default_storage_engine=innodb
+innodb_buffer_pool_size=256M
+innodb_log_file_size=50M
+character-set-server=utf8
+[client]
+port=3306
+--------------------------------------------------
+
+> mysqladmin -u root -p create mvc01 
+> mysqlshow -u root -p
+> mysql -u root -p mvc01 -h 127.0.0.1
+
+show tables;
+# create table mvc_news ( seq int primary key auto_increment, title varchar(100) not null, bbs_contents varchar(2000) not null, writer varchar(50) not null, regdate timestamp, moddate timestamp, hit int, filesrc varchar(1000) ) DEFAULT CHARSET=utf8 ;
+# alter table mvc_news drop column filesrc ;
+# alter table mvc_news add column filename varchar(200), add column filesrc varchar(1000);
+# drop table mvc_news
+create table mvc_news ( seq int primary key auto_increment, title varchar(100) not null, bbs_contents varchar(2000) not null, writer varchar(50) not null, regdate timestamp, moddate timestamp, hit int, filename varchar(200), filesrc varchar(1000) ) DEFAULT CHARSET=utf8 ;
+show tables;
+desc mvc_news;
+alter table mvc_news add index index_mvc_news (seq);
+show index from mvc_news;
+# alter table mvc_news drop index index_mvc_news (seq);
+alter table mvc_news add unique unique_mvc_news_title (title);
+# alter table mvc_news drop unique unique_mvc_news_title (title);
+
+# delete from mvc_news where title='Welcome to SpringMVC1XXX' ;
+# update mvc_news set writer='J', moddate=now() where title='Welcome to SpringMVC1XXX' ;
+# select * from mvc_news where seq < 5;
+
+> mysqladmin -u root -p shutdown
+
+-----------------------------
+ >>> rownum ...
+
+		SELECT r2.* FROM (
+			SELECT @RN:=@RN+1 AS ROWNUM, mvc_news_tb.* FROM
+				(SELECT * FROM mvc_news WHERE title LIKE '%3%' ORDER BY regdate DESC) as mvc_news_tb,
+				(SELECT @RN:=0) AS r
+			) as r2
+		WHERE ROWNUM >=5 and ROWNUM <=12
+-----------------------------
+
+
+
+
+
+
+C:\MariaDB 5.5\bin> mysqld
+
+ >>> change default pasword from '' to '1234' : type the 'enter' for 'Enter password:'
+C:\MariaDB 5.5\bin> mysqladmin -u root -p password 1234
+Enter password:
+
+C:\MariaDB 5.5\bin>
+
+
+C:\MariaDB 5.5\bin> mysqladmin -u root -p ping
+Enter password: ********
+mysqld is alive
+
+C:\MariaDB 5.5\bin> mysqlshow -u root -p
+Enter password: ********
++--------------------+
+|     Databases      |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+
+C:\MariaDB 5.5\bin> mysqlshow -u root -p mysql
+Enter password: ********
+Database: mysql
++---------------------------+
+|          Tables           |
++---------------------------+
+| columns_priv              |
+| db                        |
+| event                     |
+| func                      |
+| general_log               |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| host                      |
+| ndb_binlog_index          |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| servers                   |
+| slow_log                  |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+
+C:\MariaDB 5.5\bin> mysqladmin -u root -p create db01
+Enter password: ********
+
+C:\MariaDB 5.5\bin> mysqlshow -u root -p
+Enter password: ********
++--------------------+
+|     Databases      |
++--------------------+
+| information_schema |
+| db01               |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+
+
+C:\MariaDB 5.5\bin> mysql -u root -p db01 -h 127.0.0.1
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 43
+Server version: 5.5.29-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2012, Oracle, Monty Program Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [db01]> show tables;
+Empty set (0.00 sec)
+
+MariaDB [db01]> quit
+Bye
+
+C:\MariaDB 5.5\bin> mysql -u root -h 127.0.0.1 -p
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 51
+Server version: 5.5.29-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2012, Oracle, Monty Program Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| db01               |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+MariaDB [(none)]> use db01;
+Database changed
+MariaDB [db01]>
+
+MariaDB [db01]> select version(), current_date(), now();
++----------------+----------------+---------------------+
+| version()      | current_date() | now()               |
++----------------+----------------+---------------------+
+| 5.5.29-MariaDB | 2013-03-12     | 2013-03-12 17:30:44 |
++----------------+----------------+---------------------+
+1 row in set (0.00 sec)
+
+MariaDB [db01]> show tables;
+Empty set (0.00 sec)
+
+MariaDB [db01]> create table tb01(number integer, name char(10));
+Query OK, 0 rows affected (0.08 sec)
+
+MariaDB [db01]> show tables;
++----------------+
+| Tables_in_db01 |
++----------------+
+| tb01           |
++----------------+
+1 row in set (0.00 sec)
+
+MariaDB [db01]>
+
+MariaDB [db01]> show columns from tb01;
++--------+----------+------+-----+---------+-------+
+| Field  | Type     | Null | Key | Default | Extra |
++--------+----------+------+-----+---------+-------+
+| number | int(11)  | YES  |     | NULL    |       |
+| name   | char(10) | YES  |     | NULL    |       |
++--------+----------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+
+MariaDB [db01]> desc tb01;
++--------+----------+------+-----+---------+-------+
+| Field  | Type     | Null | Key | Default | Extra |
++--------+----------+------+-----+---------+-------+
+| number | int(11)  | YES  |     | NULL    |       |
+| name   | char(10) | YES  |     | NULL    |       |
++--------+----------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+MariaDB [db01]> insert into tb01 (number, name) values (1, 'whisper');
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [db01]> select * from tb01;
++--------+---------+
+| number | name    |
++--------+---------+
+|      1 | whisper |
++--------+---------+
+1 row in set (0.00 sec)
+
+MariaDB [db01]> alter table tb01 add column address char(15);
+Query OK, 1 row affected (0.20 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+MariaDB [db01]> desc tb01;
++---------+----------+------+-----+---------+-------+
+| Field   | Type     | Null | Key | Default | Extra |
++---------+----------+------+-----+---------+-------+
+| number  | int(11)  | YES  |     | NULL    |       |
+| name    | char(10) | YES  |     | NULL    |       |
+| address | char(15) | YES  |     | NULL    |       |
++---------+----------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+MariaDB [db01]>
+MariaDB [db01]> alter table tb01 drop column address;
+Query OK, 1 row affected (0.29 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+MariaDB [db01]> desc tb01;
++--------+----------+------+-----+---------+-------+
+| Field  | Type     | Null | Key | Default | Extra |
++--------+----------+------+-----+---------+-------+
+| number | int(11)  | YES  |     | NULL    |       |
+| name   | char(10) | YES  |     | NULL    |       |
++--------+----------+------+-----+---------+-------+
+2 rows in set (0.02 sec)
+
+MariaDB [db01]>
+MariaDB [db01]> alter table tb01 add column address char(10), add column wdate d
+ate, add column wtime time;
+Query OK, 1 row affected (0.21 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+MariaDB [db01]> desc tb01;
++---------+----------+------+-----+---------+-------+
+| Field   | Type     | Null | Key | Default | Extra |
++---------+----------+------+-----+---------+-------+
+| number  | int(11)  | YES  |     | NULL    |       |
+| name    | char(10) | YES  |     | NULL    |       |
+| address | char(10) | YES  |     | NULL    |       |
+| wdate   | date     | YES  |     | NULL    |       |
+| wtime   | time     | YES  |     | NULL    |       |
++---------+----------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
+
+MariaDB [db01]>
+MariaDB [db01]> insert into tb01 (number, name, address, wdate, wtime)
+    ->             values (2, 'kim', 'seoul', '2012-03-05', '01:10:04') ;
+Query OK, 1 row affected (0.06 sec)
+
+MariaDB [db01]> select * from tb01;
++--------+---------+---------+------------+----------+
+| number | name    | address | wdate      | wtime    |
++--------+---------+---------+------------+----------+
+|      1 | whisper | NULL    | NULL       | NULL     |
+|      2 | kim     | seoul   | 2012-03-05 | 01:10:04 |
++--------+---------+---------+------------+----------+
+2 rows in set (0.00 sec)
+
+MariaDB [db01]>
+MariaDB [db01]> update tb01 set wdate='2012-03-04', wtime='22:00' where number=1 ;
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [db01]> select * from tb01;
++--------+---------+---------+------------+----------+
+| number | name    | address | wdate      | wtime    |
++--------+---------+---------+------------+----------+
+|      1 | whisper | NULL    | 2012-03-04 | 22:00:00 |
+|      2 | kim     | seoul   | 2012-03-05 | 01:10:04 |
++--------+---------+---------+------------+----------+
+2 rows in set (0.00 sec)
+
+MariaDB [db01]>
+MariaDB [db01]> delete from tb01 where number=2 ;
+Query OK, 1 row affected (0.03 sec)
+
+MariaDB [db01]> select * from tb01 ;
++--------+---------+---------+------------+----------+
+| number | name    | address | wdate      | wtime    |
++--------+---------+---------+------------+----------+
+|      1 | whisper | NULL    | 2012-03-04 | 22:00:00 |
++--------+---------+---------+------------+----------+
+1 row in set (0.00 sec)
+
+MariaDB [db01]>
+
+MariaDB [db01]> drop table tb01;
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [db01]> show tables;
+Empty set (0.00 sec)
+
+
+
+MariaDB [db01]> create table tb01 ( seq_val INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    ->                                  grade integer,
+    ->                                  name char(20),
+    ->                                  addr varchar(50),
+    ->                                  tel varchar(10),
+    ->                                  wdate date,
+    ->                                  wtime time
+    ->                                  );
+Query OK, 0 rows affected (0.07 sec)
+
+MariaDB [db01]> show tables;
++----------------+
+| Tables_in_db01 |
++----------------+
+| tb01           |
++----------------+
+1 row in set (0.00 sec)
+
+MariaDB [db01]> desc tb01;
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| seq_val | int(11)     | NO   | PRI | NULL    | auto_increment |
+| grade   | int(11)     | YES  |     | NULL    |                |
+| name    | char(20)    | YES  |     | NULL    |                |
+| addr    | varchar(50) | YES  |     | NULL    |                |
+| tel     | varchar(10) | YES  |     | NULL    |                |
+| wdate   | date        | YES  |     | NULL    |                |
+| wtime   | time        | YES  |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
+7 rows in set (0.02 sec)
+
+MariaDB [db01]> insert into tb01 (grade, name, addr, tel, wdate, wtime) values ( 3, 'KIM', 'Seoul', '1234-2000', '2013-03-04', '01:10:00');
+MariaDB [db01]> insert into tb01 (grade, name, addr, tel, wdate, wtime) values ( 2, 'PARK', 'Seoul', '1314-3000', '2013-02-04', '05:10:35');
+MariaDB [db01]> insert into tb01 (grade, name, addr, tel, wdate, wtime) values ( 1, 'CHOI', 'BUSAN', '1414-4000', '2013-01-04', '01:20');
+MariaDB [db01]> insert into tb01 (grade, name, addr, tel, wdate, wtime) values ( 3, 'KWON', 'Seoul', '1524-5000', '2013-03-10', '03:10:01');
+
+MariaDB [db01]> select * from tb01;
++---------+-------+------+-------+-----------+------------+----------+
+| seq_val | grade | name | addr  | tel       | wdate      | wtime    |
++---------+-------+------+-------+-----------+------------+----------+
+|       1 |     3 | KIM  | Seoul | 1234-2000 | 2013-03-04 | 01:10:00 |
+|       2 |     2 | PARK | Seoul | 1314-3000 | 2013-02-04 | 05:10:35 |
+|       3 |     1 | CHOI | BUSAN | 1414-4000 | 2013-01-04 | 01:20:00 |
+|       4 |     3 | KWON | Seoul | 1524-5000 | 2013-03-10 | 03:10:01 |
++---------+-------+------+-------+-----------+------------+----------+
+4 rows in set (0.00 sec)
+
+MariaDB [db01]> select * from tb01 where wtime >= '01:10:00' order by grade desc;
++---------+-------+------+-------+-----------+------------+----------+
+| seq_val | grade | name | addr  | tel       | wdate      | wtime    |
++---------+-------+------+-------+-----------+------------+----------+
+|       1 |     3 | KIM  | Seoul | 1234-2000 | 2013-03-04 | 01:10:00 |
+|       4 |     3 | KWON | Seoul | 1524-5000 | 2013-03-10 | 03:10:01 |
+|       2 |     2 | PARK | Seoul | 1314-3000 | 2013-02-04 | 05:10:35 |
+|       3 |     1 | CHOI | BUSAN | 1414-4000 | 2013-01-04 | 01:20:00 |
++---------+-------+------+-------+-----------+------------+----------+
+4 rows in set (0.00 sec)
+
+MariaDB [db01]> select * from tb01 where wtime >= '01:10:00' order by grade desc, seq_val desc;
++---------+-------+------+-------+-----------+------------+----------+
+| seq_val | grade | name | addr  | tel       | wdate      | wtime    |
++---------+-------+------+-------+-----------+------------+----------+
+|       4 |     3 | KWON | Seoul | 1524-5000 | 2013-03-10 | 03:10:01 |
+|       1 |     3 | KIM  | Seoul | 1234-2000 | 2013-03-04 | 01:10:00 |
+|       2 |     2 | PARK | Seoul | 1314-3000 | 2013-02-04 | 05:10:35 |
+|       3 |     1 | CHOI | BUSAN | 1414-4000 | 2013-01-04 | 01:20:00 |
++---------+-------+------+-------+-----------+------------+----------+
+4 rows in set (0.00 sec)
+
+MariaDB [db01]> select @RN:=@RN+1 as ROWNUM, tbl.* from (
+    ->      select * from tb01 where wtime >= '01:10:00' ) as tbl,
+    ->      ( select @RN:=0) as r
+    ->         order by tbl.grade desc, tbl.seq_val desc
+    ->         ;
++--------+---------+-------+------+-------+-----------+------------+----------+
+| ROWNUM | seq_val | grade | name | addr  | tel       | wdate      | wtime    |
++--------+---------+-------+------+-------+-----------+------------+----------+
+|      1 |       4 |     3 | KWON | Seoul | 1524-5000 | 2013-03-10 | 03:10:01 |
+|      2 |       1 |     3 | KIM  | Seoul | 1234-2000 | 2013-03-04 | 01:10:00 |
+|      3 |       2 |     2 | PARK | Seoul | 1314-3000 | 2013-02-04 | 05:10:35 |
+|      4 |       3 |     1 | CHOI | BUSAN | 1414-4000 | 2013-01-04 | 01:20:00 |
++--------+---------+-------+------+-------+-----------+------------+----------+
+4 rows in set (0.00 sec)
+
+
+MariaDB [db01]> quit
+Bye
+
+C:\MariaDB 5.5\bin>
+
+
+C:\MariaDB 5.5\bin> mysqlshow -u root -p
+Enter password: ********
++--------------------+
+|     Databases      |
++--------------------+
+| information_schema |
+| db01               |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+
+C:\MariaDB 5.5\bin> mysqladmin -u root -p drop db01
+Enter password: ********
+Dropping the database is potentially a very bad thing to do.
+Any data stored in the database will be destroyed.
+
+Do you really want to drop the 'db01' database [y/N] y
+Database "db01" dropped
+
+C:\MariaDB 5.5\bin> mysqlshow -u root -p
+Enter password: ********
++--------------------+
+|     Databases      |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+
+C:\MariaDB 5.5\bin>
+C:\MariaDB 5.5\bin> mysqladmin -u root -p shutdown
+Enter password: ********
+
+C:\MariaDB 5.5\bin>
+

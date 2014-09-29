@@ -1,0 +1,110 @@
+
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '1',  'Title - Client Scripts #01', 'Web content - Client Scripts #01', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '2',  'Title - Client Scripts #02', 'Web content - Client Scripts #02', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '3',  'Title - Client Scripts #03', 'Web content - Client Scripts #03', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '4',  'Title - Client Scripts #04', 'Web content - Client Scripts #04', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '5',  'Title - Client Scripts #05', 'Web content - Client Scripts #05', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '6',  'Title - Client Scripts #06', 'Web content - Client Scripts #06', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '7',  'Title - Client Scripts #07', 'Web content - Client Scripts #07', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '8',  'Title - Client Scripts #08', 'Web content - Client Scripts #08', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '9',  'Title - Client Scripts #09', 'Web content - Client Scripts #09', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '10', 'Title - Client Scripts #10', 'Web content - Client Scripts #10', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '11', 'Title - Client Scripts #11', 'Web content - Client Scripts #11', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '12', 'Title - Client Scripts #12', 'Web content - Client Scripts #12', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '13', 'Title - Client Scripts #13', 'Web content - Client Scripts #13', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '14', 'Title - Client Scripts #14', 'Web content - Client Scripts #14', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '15', 'Title - Client Scripts #15', 'Web content - Client Scripts #15', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '16', 'Title - Client Scripts #16', 'Web content - Client Scripts #16', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '17', 'Title - Client Scripts #17', 'Web content - Client Scripts #17', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '18', 'Title - Client Scripts #18', 'Web content - Client Scripts #18', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '19', 'Title - Client Scripts #19', 'Web content - Client Scripts #19', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '20', 'Title - Client Scripts #20', 'Web content - Client Scripts #20', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '21', 'Title - Client Scripts #21', 'Web content - Client Scripts #21', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '22', 'Title - Client Scripts #22', 'Web content - Client Scripts #22', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '23', 'Title - Client Scripts #23', 'Web content - Client Scripts #23', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '24', 'Title - Client Scripts #24', 'Web content - Client Scripts #24', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '25', 'Title - Client Scripts #25', 'Web content - Client Scripts #25', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '26', 'Title - Client Scripts #26', 'Web content - Client Scripts #26', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '27', 'Title - Client Scripts #27', 'Web content - Client Scripts #27', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '28', 'Title - Client Scripts #28', 'Web content - Client Scripts #28', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '29', 'Title - Client Scripts #29', 'Web content - Client Scripts #29', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '30', 'Title - Client Scripts #30', 'Web content - Client Scripts #30', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '31', 'Title - Client Scripts #31', 'Web content - Client Scripts #31', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '32', 'Title - Client Scripts #32', 'Web content - Client Scripts #32', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '33', 'Title - Client Scripts #33', 'Web content - Client Scripts #33', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '34', 'Title - Client Scripts #34', 'Web content - Client Scripts #34', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '35', 'Title - Client Scripts #35', 'Web content - Client Scripts #35', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '36', 'Title - Client Scripts #36', 'Web content - Client Scripts #36', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '37', 'Title - Client Scripts #37', 'Web content - Client Scripts #37', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '38', 'Title - Client Scripts #38', 'Web content - Client Scripts #38', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '39', 'Title - Client Scripts #39', 'Web content - Client Scripts #39', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '40', 'Title - Client Scripts #40', 'Web content - Client Scripts #40', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '41', 'Title - Client Scripts #41', 'Web content - Client Scripts #41', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '42', 'Title - Client Scripts #42', 'Web content - Client Scripts #42', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '43', 'Title - Client Scripts #43', 'Web content - Client Scripts #43', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '44', 'Title - Client Scripts #44', 'Web content - Client Scripts #44', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '45', 'Title - Client Scripts #45', 'Web content - Client Scripts #45', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '46', 'Title - Client Scripts #46', 'Web content - Client Scripts #46', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '47', 'Title - Client Scripts #47', 'Web content - Client Scripts #47', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '48', 'Title - Client Scripts #48', 'Web content - Client Scripts #48', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '49', 'Title - Client Scripts #49', 'Web content - Client Scripts #49', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '50', 'Title - Client Scripts #50', 'Web content - Client Scripts #50', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '51', 'Title - Client Scripts #51', 'Web content - Client Scripts #51', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '52', 'Title - Client Scripts #52', 'Web content - Client Scripts #52', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '53', 'Title - Client Scripts #53', 'Web content - Client Scripts #53', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '54', 'Title - Client Scripts #54', 'Web content - Client Scripts #54', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '55', 'Title - Client Scripts #55', 'Web content - Client Scripts #55', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '56', 'Title - Client Scripts #56', 'Web content - Client Scripts #56', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '57', 'Title - Client Scripts #57', 'Web content - Client Scripts #57', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '58', 'Title - Client Scripts #58', 'Web content - Client Scripts #58', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '59', 'Title - Client Scripts #59', 'Web content - Client Scripts #59', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '60', 'Title - Client Scripts #60', 'Web content - Client Scripts #60', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '61', 'Title - Client Scripts #61', 'Web content - Client Scripts #61', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '62', 'Title - Client Scripts #62', 'Web content - Client Scripts #62', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '63', 'Title - Client Scripts #63', 'Web content - Client Scripts #63', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '64', 'Title - Client Scripts #64', 'Web content - Client Scripts #64', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '65', 'Title - Client Scripts #65', 'Web content - Client Scripts #65', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '66', 'Title - Client Scripts #66', 'Web content - Client Scripts #66', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '67', 'Title - Client Scripts #67', 'Web content - Client Scripts #67', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '68', 'Title - Client Scripts #68', 'Web content - Client Scripts #68', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '69', 'Title - Client Scripts #69', 'Web content - Client Scripts #69', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '70', 'Title - Client Scripts #70', 'Web content - Client Scripts #70', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '71', 'Title - Client Scripts #71', 'Web content - Client Scripts #71', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '72', 'Title - Client Scripts #72', 'Web content - Client Scripts #72', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '73', 'Title - Client Scripts #73', 'Web content - Client Scripts #73', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '74', 'Title - Client Scripts #74', 'Web content - Client Scripts #74', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '75', 'Title - Client Scripts #75', 'Web content - Client Scripts #75', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '76', 'Title - Client Scripts #76', 'Web content - Client Scripts #76', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '77', 'Title - Client Scripts #77', 'Web content - Client Scripts #77', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '78', 'Title - Client Scripts #78', 'Web content - Client Scripts #78', 'admin', now(), now()) ;
+insert into tb_clientside ( ref_no, title, cont, writer, cdate, mdate ) values ( '79', 'Title - Client Scripts #79', 'Web content - Client Scripts #79', 'admin', now(), now()) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

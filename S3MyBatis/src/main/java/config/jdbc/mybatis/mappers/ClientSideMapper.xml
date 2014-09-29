@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="nz.co.s3m.clientside.dao.ClientSideDAO">
+
+	<resultMap type="nz.co.s3m.clientside.vo.ClientSideVO" id="ClientSideResultMap">
+	</resultMap>
+
+	<select id="getClientSideList" resultMap="ClientSideResultMap">
+		SELECT * FROM tb_clientside ORDER BY ref_no desc, ref_step asc ;
+	</select>
+
+	<select id="getClientSideDetail" resultType="nz.co.s3m.clientside.vo.ClientSideVO">
+		SELECT * FROM tb_clientside  
+			WHERE bbsno=#{bbsno}
+	</select>	
+
+	<insert id="insertClientSide" parameterType="nz.co.s3m.clientside.vo.ClientSideVO">
+		INSERT INTO tb_clientside  (ref_no, ref_level, ref_step, title, cont, writer, cdate, mdate, views, likes, afile, deleted)
+			VALUES (#{ref_no}, #{ref_level}, #{ref_step}, #{title}, #{cont}, #{writer}, now(), now(), '0', '0', #{aFile}, 'N')
+	</insert>
+	
+		
+	<update id="updateClientSideOrders">
+		UPDATE tb_clientside SET ref_step=ref_step+1
+			WHERE bbsno=#{bbsno} AND ref_step > #{ref_step}	
+	</update>	
+	
+	<update id="updateClientSide" parameterType="nz.co.s3m.clientside.vo.ClientSideVO">
+		UPDATE tb_clientside SET
+			ref_step = #{ref_step},
+			title = #{title},
+			cont = #{cont},
+			mdate = now(),
+			likes = #{likes},
+			afile = #{afile},
+			deleted = #{deleted}
+		WHERE bbsno=#{bbsno}			
+	</update>		
+	
+	<delete id="deleteClientSide">
+		DELETE FROM tb_clientside
+			WHERE bbsno=#{bbsno}
+	</delete>
+	
+	
+	<select id="totalClientSideLists" resultType="java.lang.Integer">
+		SELECT count(bbsno) FROM tb_clientside 
+	</select>	
+	
+</mapper>
